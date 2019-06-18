@@ -1,10 +1,10 @@
-# Sc0de_awd_platform
+# Dozer_awd_platform(修改自Sc0de_awd_platform)
 
 
 
 一个awd攻防比赛的裁判平台。
 
-版本：beta v1.0
+版本：beta v0.1
 开发语言：python + django
 
 

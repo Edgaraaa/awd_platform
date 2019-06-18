@@ -2,6 +2,22 @@ from django.db import models
 
 
 # Create your models here.
+class User(models.Model):
+    """
+    用户注册，用于便利注册账号
+    """
+    user_name = models.CharField(max_length=20)
+    sex_kind = models.CharField(max_length=5)
+    phone_num = models.CharField(max_length=20)
+    score_it = models.IntegerField()
+
+class Team(models.Model):
+    """
+    队伍注册
+    """
+    team_name = models.CharField(max_length=20)
+    mumber_num = models.IntegerField()
+
 
 class Flag(models.Model):
     """
