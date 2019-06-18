@@ -7,12 +7,13 @@ from django.utils.timezone import utc
 from django.db.models import Q
 
 import hashlib
-
+import os
 
 
 # Create your views here.
 
 def index(request):
+    print(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     utcnow = datetime.datetime.utcnow().replace(tzinfo=utc)
     message = ['success', '欢迎来到提交平台']  # "Success Message" "success"
     if request.POST:
@@ -71,7 +72,13 @@ def score(request):
     message = ['success', '来查看总榜了呢']
     return render(request, 'table.html', {'message': message, 'backimg': random.randint(0, 16)})
 
+def signin(request):
+    message = ['success','欢迎师傅^_^']
+    return render(request,'sign_in.html',{'message':message,'backimg':random.randint(0,16)})
 
+def signup(request):
+    message = ['success','欢迎师傅前来注册！！']
+    return render(request,'sign_up.html',{'message':message,'backimg':random.randint(0,16)})
 def api1(request):
     html = ''
     for i in Status.objects.all():

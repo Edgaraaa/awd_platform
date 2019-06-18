@@ -19,7 +19,8 @@ from app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.index,name='index'),  
+    path('',views.signin,name='signin'),
+    path('sign_up',views.signup,name='signup'),
     path('score/',views.score,name='score'),
     path('ajlkgnkjvxiHKGS/',views.admin,name='admin'),
     path('ajlkgnkjvxiHKGS/table/',views.admin_table,name='admin_table'),
